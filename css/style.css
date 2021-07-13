@@ -65,70 +65,35 @@ body{
 }
 
 
+
 /*------------------------
    Players info card css
 ------------------------*/
-.player-cards{
-    margin-top: 70px;
-    margin-left: 150px;
-    margin-right: 150px;
-    display: grid;
-    grid-template-columns: repeat(3, 330px);
-    grid-gap: 27px 30px;
-}
+
 .card{
     width: 330px;
     height: 474px;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 .card img{
-    padding: 15px 15px 16px 15px;
     width: 300px;
     height: 256px;
 }
 .card h3{
-    margin-top: 0;
-    margin-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
     color: #18191F;
 }
 .card p{
-    margin: 0;
-    padding: 0 15px 33px 15px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     color: #6C6C6C;
 }
-
-
-/*---------------------
- footer part styles 
- -------------------*/
- .main-parent{
-     margin-bottom: 63px;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
- }
- .main-parent p{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    color: #000000;
- }
-.football img{
-    margin-top: 158px;
-    width: 483.87px;
-    height: 110px;
+.card img,h3,p{
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 33px;
+    padding-left: 15px;
 }
-.social-icon img{
-    width: 32px;
-    height: 32px;
-    padding-right: 14px;
-}
+
