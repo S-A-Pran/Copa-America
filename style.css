@@ -340,11 +340,6 @@ p {
 --------------------------------*/
 
 @media only screen and (max-width: 480px) {
-  .header-section,
-  .main-body,
-  footer {
-    overflow: hidden;
-  }
 
   /* header part for mobile */
 
@@ -465,6 +460,16 @@ p {
   .article {
     height: 150px;
     width: 100%;
+  }
+  .view {
+    position: absolute;
+    top: 415px;
+    left: 10px;
+  }
+  .view p {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
   }
 
   /* footer section design */
