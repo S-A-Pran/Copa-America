@@ -2,133 +2,481 @@
   google font poppins link importing 
 -------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/*----------------------
+ animation styles design 
+ ----------------------*/
+@keyframes crack {
+  from {
+    top: 628;
+    left: 20;
+  }
+  to {
+    top: 210px;
+    left: 20;
+    transform: scale(0.5);
+    transition: transform 2s;
+  }
+}
+@keyframes explosion {
+  from {
+    height: 0px;
+    width: 0px;
+    left: 10;
+  }
+  to {
+    left: 10;
+    height: 400px;
+    width: 400px;
+  }
+}
+@keyframes thumb {
+  from {
+    width: 556.01px;
+    height: 438px;
+  }
+  to {
+    transform: scale(0.92);
+    transition: transform;
+  }
+}
 
 /*------------------------------------------
  Common works like reducing default padding
 ------------------------------------------*/
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
-
 
 /*-----------------------------
  Header Section Styles did here 
 ------------------------------*/
-.home-banner{
-    width: 100%;
-    height: 677px;
-    background-color: #2D25A0;
-    display: flex;
+header:hover .crackers {
+  display: block;
+}
+header:hover .home-thumb {
+  animation: thumb 1.3s ease-in-out 0s infinite alternate-reverse;
+}
+.home-banner {
+  width: 100%;
+  height: 677px;
+  background-color: #2d25a0;
+  display: flex;
+  align-items: center;
+}
+.copa-title {
+  padding-left: 156px;
+  padding-right: 102px;
+}
+.copa-title h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  margin: 0;
+  color: #ffffff;
+}
+.copa-title a {
+  margin-top: 27px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.live-button {
+  background-color: #e02c6d;
+  width: 168px;
+  height: 44px;
+  margin-top: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.live-button p {
+  padding-right: 8px;
+}
+.live-button p,
+.fa-arrow-right {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+}
+.home-banner img {
+  width: 556.01px;
+  height: 438px;
+  padding-right: 141px;
+}
+
+.crackers {
+  height: 628px;
+  position: absolute;
+  top: 0;
+  left: 20;
+  display: none;
+}
+.blast {
+  position: absolute;
+  top: 0;
+  left: 10;
+  height: 20px;
+  width: 20px;
+  animation: explosion 3s ease-out 4s infinite normal;
+}
+.bomb {
+  position: absolute;
+  top: 628px;
+  left: 20;
+  height: 50px;
+  width: 50px;
+  animation: crack 4s ease-out 0s infinite normal;
+}
+
+/*------------------------
+   Players info card css
+------------------------*/
+.player-cards {
+  margin-top: 70px;
+  margin-left: 150px;
+  margin-right: 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 330px);
+  grid-gap: 27px 30px;
+}
+.card {
+  width: 330px;
+  height: 474px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.card img {
+  padding: 15px 15px 16px 15px;
+  width: 300px;
+  height: 256px;
+}
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  color: #18191f;
+}
+.card p {
+  margin: 0;
+  padding: 0 15px 33px 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #6c6c6c;
+}
+
+/*---------------------------
+ The Highlights parts design 
+ ----------------------------*/
+.highlights {
+  margin: 130px 50px;
+}
+fieldset {
+  border-color: rgb(247, 247, 247);
+  border-style: solid;
+}
+.legend-title {
+  background-color: #e02c6d;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  border-radius: 30px;
+  padding: 5px 30px 5px 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.legend-title a {
+  text-decoration: none;
+  color: white;
+}
+.legend-title:hover {
+  background-color: gray;
+  color: white;
+  transition: background-color 1s;
+}
+.videos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.video {
+  width: 367px;
+  height: 280px;
+  text-align: center;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.video iframe {
+  width: 90%;
+  height: 65%;
+}
+.video h3 {
+  margin-top: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+}
+.video iframe,
+h3 {
+  padding-top: 4%;
+}
+
+/*-----------------
+  news blog styles 
+ -----------------*/
+.news {
+  width: 100%;
+  height: auto;
+  background-color: rgb(0, 0, 31);
+  padding-top: 20px;
+}
+.news-article {
+  padding: 10px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.headline {
+  margin-left: 20px;
+  color: white;
+  margin-bottom: 0;
+}
+.blog {
+  position: relative;
+  margin: 10px 20px 20px 20px;
+  width: 630px;
+  height: 300px;
+  display: flex;
+  box-shadow: 0px 0px 2px white;
+  border-radius: 10px;
+}
+.news-thumb {
+  width: 350px;
+  height: 300px;
+  overflow: hidden;
+}
+.news-thumb img {
+  width: 350px;
+  height: 300px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.news-thumb img:hover {
+  transform: scale(1.2);
+  transition: transform 2s ease-in-out;
+}
+.article {
+  height: 300px;
+  width: 280px;
+}
+.article h2 {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.article p {
+  margin-top: 0px;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.article h2,
+p {
+  color: white;
+  padding: 10px;
+}
+.view {
+  position: absolute;
+  top: 260px;
+  left: 540px;
+}
+.view p {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+/*---------------------
+ footer part styles 
+ -------------------*/
+.main-parent {
+  margin-bottom: 63px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-parent p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #000000;
+}
+.football img {
+  margin-top: 158px;
+  width: 483.87px;
+  height: 110px;
+}
+.social-icon img {
+  width: 32px;
+  height: 32px;
+  padding-right: 14px;
+}
+
+/* allparts styles end */
+
+/*-------------------------------
+  media query part starting here 
+--------------------------------*/
+
+@media only screen and (max-width: 480px) {
+  .header-section,
+  .main-body,
+  footer {
+    overflow: hidden;
+  }
+
+  /* header part for mobile */
+
+  .home-banner {
+    flex-direction: column;
     align-items: center;
-}
-.copa-title{
-    padding-left: 156px;
-    padding-right: 102px;
-}
-.copa-title h1{
+    justify-content: space-around;
+    align-content: stretch;
+  }
+  .copa-title {
+    padding-left: 16px;
+    padding-right: 66px;
+  }
+  .copa-title h1 {
     font-style: normal;
     font-weight: bold;
-    font-size: 64px;
+    font-size: 36px;
+    line-height: 50px;
     margin: 0;
-    color: #FFFFFF;
-}
-.copa-title a{
-    margin-top: 27px;
-    color: #FFFFFF;;
-    text-decoration: none;
-}
-.live-button{
-    background-color: #E02C6D;
+    padding: 0;
+    color: #ffffff;
+  }
+  .live-button {
+    background-color: #e02c6d;
     width: 168px;
     height: 44px;
     margin-top: 27px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.live-button p{
-    padding-right: 8px;
-}
-.live-button p,.fa-arrow-right{
+  }
+  .live-button p,
+  .fa-arrow-right {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     margin: 0;
-}
-.home-banner img{
-    width: 556.01px;
-    height: 438px;
-    padding-right: 141px;
-}
-
-
-/*------------------------
-   Players info card css
-------------------------*/
-.player-cards{
-    margin-top: 70px;
-    margin-left: 150px;
-    margin-right: 150px;
-    display: grid;
-    grid-template-columns: repeat(3, 330px);
-    grid-gap: 27px 30px;
-}
-.card{
-    width: 330px;
-    height: 474px;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-}
-.card img{
-    padding: 15px 15px 16px 15px;
-    width: 300px;
-    height: 256px;
-}
-.card h3{
-    margin-top: 0;
-    margin-bottom: 10px;
+  }
+  .home-banner img {
+    width: 329px;
+    height: 259.17px;
+    padding-right: 16px;
     padding-left: 15px;
-    padding-right: 15px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    color: #18191F;
-}
-.card p{
-    margin: 0;
-    padding: 0 15px 33px 15px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    color: #6C6C6C;
-}
+  }
+  header:hover .crackers {
+    display: block;
+  }
+  header:hover .home-thumb {
+    animation: none;
+  }
 
+  /* player card section */
+  .player-section {
+    margin-top: 47px;
+    text-align: center;
+  }
+  .player-cards {
+    grid-template-columns: 1fr;
+    grid-row-gap: 15px;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+  }
+  .card {
+    margin: 0 auto;
+  }
 
-/*---------------------
- footer part styles 
- -------------------*/
- .main-parent{
-     margin-bottom: 63px;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
- }
- .main-parent p{
+  /* highlight section design */
+  .highlights {
+    margin: 0px;
+    margin-top: 60px;
+  }
+  .videos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .video {
+    margin-left: 0px;
+  }
+
+  /* news section design */
+  .news {
+    margin-top: 60px;
+  }
+  .news-article {
+    padding: 5px;
+    padding-bottom: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    text-align: center;
+  }
+  .news-thumb {
+    width: 100%;
+    height: 40%;
+    overflow: hidden;
+  }
+
+  .blog {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 2px white;
+    border-radius: 10px;
+  }
+  .news-thumb img {
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  .article {
+    height: 150px;
+    width: 100%;
+  }
+
+  /* footer section design */
+  .main-parent p {
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     color: #000000;
- }
-.football img{
-    margin-top: 158px;
-    width: 483.87px;
-    height: 110px;
-}
-.social-icon img{
-    width: 32px;
-    height: 32px;
-    padding-right: 14px;
+  }
+  .football img {
+    margin-top: 43px;
+    width: 150px;
+    height: 63px;
+  }
 }
