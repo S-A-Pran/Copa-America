@@ -75,19 +75,20 @@ header:hover .home-thumb {
   font-style: normal;
   font-weight: bold;
   font-size: 64px;
+  padding-bottom: 27px;
   margin: 0;
   color: #ffffff;
 }
 .copa-title a {
-  margin-top: 27px;
   color: #ffffff;
   text-decoration: none;
 }
 .live-button {
+  overflow: hidden;
   background-color: #e02c6d;
-  width: 168px;
   height: 44px;
-  margin-top: 27px;
+  width: 168px;
+  margin-top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
